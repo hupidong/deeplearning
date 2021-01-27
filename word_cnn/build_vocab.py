@@ -50,7 +50,7 @@ def update_vocab(txt_path, vocab):
     Returns:
         dataset_size: (int) number of elements in the dataset
     """
-    with open(txt_path) as f:
+    with open(txt_path, encoding='utf8') as f:
         for i, line in enumerate(f):
             fields = line.strip().split(',')
             if len(fields) < 3: continue
